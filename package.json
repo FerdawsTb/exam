@@ -1,13 +1,18 @@
 {
   "name": "101-app",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Todo List App for DevOps practical test",
+  "main": "src/index.js",
   "license": "MIT",
+
   "scripts": {
-    "prettify": "prettier -l --write \"**/*.js\"",
+    "start": "node src/index.js",
+    "dev": "nodemon -L src/index.js",
     "test": "jest",
-    "dev": "nodemon -L src/index.js"
+    "prettify": "prettier -l --write \"**/*.js\"",
+    "build": "echo \"Build step not required for Node app\""
   },
+
   "dependencies": {
     "express": "^4.18.2",
     "mysql2": "^2.3.3",
@@ -15,19 +20,22 @@
     "uuid": "^9.0.0",
     "wait-port": "^1.0.4"
   },
+
+  "devDependencies": {
+    "jest": "^29.3.1",
+    "nodemon": "^2.0.20",
+    "prettier": "^2.7.1"
+  },
+
   "resolutions": {
     "ansi-regex": "5.0.1"
   },
+
   "prettier": {
     "trailingComma": "all",
     "tabWidth": 4,
     "useTabs": false,
     "semi": true,
     "singleQuote": true
-  },
-  "devDependencies": {
-    "jest": "^29.3.1",
-    "nodemon": "^2.0.20",
-    "prettier": "^2.7.1"
   }
 }
